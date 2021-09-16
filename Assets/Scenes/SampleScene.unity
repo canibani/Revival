@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -604,13 +605,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd625e4ef10db4479fac75af6f1aef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 204241788}
 --- !u!1001 &4990870485804954058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -618,6 +632,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 647914860}
     m_Modifications:
+    - target: {fileID: 1494446468563576448, guid: 1699db43126bbe948b3f2abc09788d64, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1947496286731719359, guid: 1699db43126bbe948b3f2abc09788d64, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -664,6 +682,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7540804682891219000, guid: 1699db43126bbe948b3f2abc09788d64, type: 3}
       propertyPath: m_Name
+      value: Ankh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540804682891219000, guid: 1699db43126bbe948b3f2abc09788d64, type: 3}
+      propertyPath: m_TagString
       value: Ankh
       objectReference: {fileID: 0}
     m_RemovedComponents: []

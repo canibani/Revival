@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed;
     public Vector3 jump;
     public bool isGrounded;
 
@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
     private float movementY;
+    private int collected;
 
 
     // Start is called before the first frame update
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         isGrounded = true;
+        collected = 0;
+        speed = 5;
     }
 
     void OnMove(InputValue movementValue)  
@@ -48,6 +51,14 @@ public class PlayerController : MonoBehaviour
         if(isGrounded){
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.gameObject.CompareTag("Ankh")) {
+            other.gameObject.SetActive(false);
+            collected++;
         }
     }
 }
